@@ -1,8 +1,0 @@
-import sys
-import requests
-
-accountDetails = {"callbackURL":"http://localhost:8080", "twolegged":"true","email":"brv%2Baaatest%40tradeshift.com","firstname":"Brad","lastname":"Voracek","title":"","companyName":"TS","street":"","buildingnumber":"","locality":"","zip":"94611","city":"San Francisco","state":"CA","recipient":"DK","country":"US","phone":"","fax":"","timezone":"","tsRegnoLabel":"","tsRegnoValue":"","tsVATLabel":"","tsVATValue":"","gln":"","dkCVR":"","gbVAT":"","ieVAT":"","deSTN":"","deMWST":"","atSTN":"","atMWST":"","chMWST":""}
-requestHeaders = {"X-Tradeshift-ConsumerKey":"mbGvpE1ZfrghMZXEenjW","Accept":"text/html,application/xml","User-Agent":"python-request/1.2.0","Cookie":"loginHash=%3A%3Aexternal%2Fxsite%2Fsignup%3Fcallbackurl%3Dhttp%3A%2F%2Flocalhost%3A8080%26twolegged%3Dtrue%26email%3Dbrv%2Baaatest%40tradeshift.com%26firstname%3DBrad%26lastname%3DVoracek%26companyName%3DTS%26country%3DUS%3A%3A; TSAPPID=44139302; JSESSIONID=1j9m9h4i4yip1ozlpsfmuzu9w"}
-
-r = requests.get("http://localhost:8080/external/xsite/signup?callbackURL=%(callbackURL)s&twolegged=%(twolegged)s&email=%(email)s&firstname=%(firstname)s&lastname=%(lastname)s&title=%(title)s&companyName=%(companyName)s&street=%(street)s&buildingnumber=%(buildingnumber)s&locality=%(locality)s&zip=%(zip)s&city=%(city)s&state=%(state)s&recipient=%(recipient)s&country=%(country)s&phone=%(phone)s&fax=%(fax)s&timezone=%(timezone)s&tsRegnoLabel=%(tsRegnoLabel)s&tsRegnoValue=%(tsRegnoValue)s&tsVATLabel=%(tsVATLabel)s&tsVATValue=%(tsVATValue)s&gln=%(gln)s&dkCVR=%(dkCVR)s&gbVAT=%(gbVAT)s&ieVAT=%(ieVAT)s&deSTN=%(deSTN)s&deMWST=%(deMWST)s&atSTN=%(atSTN)s&atMWST=%(atMWST)s&chMWST=%(chMWST)s" % accountDetails, headers=requestHeaders)
-
